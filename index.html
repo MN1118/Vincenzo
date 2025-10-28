@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protected PDF</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f4f8;
+        font-family: Arial, sans-serif;
+        flex-direction: column;
+      }
+      input,
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Enter Password to Access PDF</h2>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Submit</button>
+
+    <script>
+      function checkPassword() {
+        const correctPassword = "Admin@123"; // change this!
+        const input = document.getElementById("password").value;
+        if (input === correctPassword) {
+          window.location.href = "daa.pdf";
+        } else {
+          alert("Incorrect password!");
+        }
+      }
+    </script>
+  </body>
+</html>
