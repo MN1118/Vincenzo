@@ -3,48 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protected PDF</title>
+    <title>Download Center</title>
     <style>
       body {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        text-align: center;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #f0f4f8;
-        font-family: Arial, sans-serif;
-        flex-direction: column;
+        overflow: hidden;
       }
-      input,
-      button {
-        margin: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
+      h1 {
+        color: #333;
       }
-      button {
+      .button {
+        display: inline-block;
+        margin: 20px;
+        padding: 15px 30px;
+        font-size: 18px;
+        color: #fff;
         background-color: #007bff;
-        color: white;
         border: none;
-        border-radius: 6px;
+        border-radius: 8px;
         cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      img {
+        display: block;
+        max-width: 20%;
+        height: auto;
+        margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <h2>Enter Password to Access PDF</h2>
-    <input type="password" id="password" placeholder="Enter password" />
-    <button onclick="checkPassword()">Submit</button>
-
-    <script>
-      function checkPassword() {
-        const correctPassword = "Admin@123"; // change this!
-        const input = document.getElementById("password").value;
-        if (input === correctPassword) {
-          window.location.href = "daa.pdf";
-        } else {
-          alert("Incorrect password!");
-        }
-      }
-    </script>
+    <img
+      src="https://wallpapers.com/images/hd/one-punch-man-o-k-reaction-vne9mhintur4akav.jpg"
+      alt=""
+    />
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/One_Punch_Man_logo.svg/640px-One_Punch_Man_logo.svg.png"
+      alt=""
+    />
+    <br />
+    <div class="new">
+      <a href="daa.pdf" download class="button">Download PDF</a>
+      <a
+        href="https://github.com/chatya123/Daa-practicals/archive/refs/heads/main.zip"
+        download
+        class="button"
+        >Download ZIP</a
+      >
+    </div>
   </body>
 </html>
